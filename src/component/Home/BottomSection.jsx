@@ -502,10 +502,13 @@ const ContactSection = () => {
                     <p className="text-red-400 text-sm mt-1">{formState.errors.message}</p>
                   )}
                 </div>
+                <div className='pb-4 justify-center items-center'>
                 <ReCAPTCHA
                   sitekey="6Lf89AkrAAAAALiKO6bAmytzBzRNr6BBsFwOXN--"
                   onChange={(token) => setCaptchaToken(token)}
                 />
+                </div>
+                
                 <button
                   type="submit"
                   disabled={formState.isSubmitting}
@@ -574,31 +577,7 @@ const ContactSection = () => {
             ))}
 
             {/* Social proof section */}
-            <div className={`mt-12 transition-all duration-1000 delay-500 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              <InteractiveCard>
-                <div className="text-center p-6">
-                  <div className="flex justify-center space-x-2 mb-4">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="w-6 h-6 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-600 italic mb-4">
-                    "Working with Cloud Garage has been transformative for our business. Their expertise and support are unmatched."
-                  </p>
-                  <div className="flex items-center justify-center space-x-2">
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-violet-500 rounded-full flex items-center justify-center">
-                      <span className="text-white font-semibold">JD</span>
-                    </div>
-                    <div className="text-left">
-                      <div className="font-semibold text-gray-800">John Doe</div>
-                      <div className="text-sm text-gray-600">CEO, Tech Corp</div>
-                    </div>
-                  </div>
-                </div>
-              </InteractiveCard>
-            </div>
+            
           </div>
         </div>
       </div>
