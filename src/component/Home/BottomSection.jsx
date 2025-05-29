@@ -4,6 +4,9 @@ import { Rocket, Send, MapPin, Phone, Mail, Users, Building, Award, Check, Spark
 import FooterSection from './Footer';
 
 import ReCAPTCHA from 'react-google-recaptcha';
+import IndustryCard from './Success';
+import IndustryCardsPreview from './IndustryCards';
+import SectorSelector from './SctorCard';
 
 
 // Reusable animated gradient text
@@ -278,30 +281,8 @@ const AboutSection = () => {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="relative rounded-2xl overflow-hidden group">
-          {/* Glowing animated border */}
-          <div className="absolute inset-0 z-0 before:content-[''] before:absolute before:inset-0 before:rounded-2xl before:animate-gradient-glow before:bg-[length:200%_200%] before:bg-gradient-to-r before:from-blue-500 before:via-purple-500 before:to-cyan-400 blur-sm opacity-70"></div>
-
-          {/* Grain texture */}
-          <div className="absolute inset-0 z-0 bg-[url('/grain.png')] opacity-[0.06] mix-blend-overlay pointer-events-none"></div>
-
-          {/* Card Content */}
-          <div className="relative z-10 bg-white/90 dark:bg-black/80 backdrop-blur-2xl rounded-2xl p-10 shadow-2xl transition-transform group-hover:scale-[1.02] duration-300 ease-out border border-white/10 dark:border-white/5">
-            {/* Animated Icon */}
-            <div className="flex items-center mb-4">
-              <Briefcase className="text-blue-600 dark:text-cyan-400 w-8 h-8 animate-pulse" />
-              <h3 className="ml-3 text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight animate-fade-slide">
-                Success Stories
-              </h3>
-            </div>
-
-            {/* Animated Text */}
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed animate-fade-delay">
-              We’re not just partners; we’re <span className="font-semibold text-blue-600 dark:text-cyan-400">innovators</span>. Our stories span industries—from e-commerce to healthcare. Let’s build your story next.
-            </p>
-          </div>
-        </div>
+      <div className="">
+      <SectorSelector />
       </div>
 
       <style jsx>{`
